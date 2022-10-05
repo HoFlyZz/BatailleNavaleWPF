@@ -2,16 +2,17 @@
 
 namespace BatailleNavale
 {
-    class Navire
+    public abstract class Navire : INaivre
     {
-        public TypeNavire Type { get; }
+        public int Longeur { get; }
         public bool Coule { get => EstCoule(); }
 
-        private readonly Case[] cases;
+        public Case[] cases;
 
-        public Navire (TypeNavire type, Case[] carres)
+        public Navire (int longeur , Case[] carres)
         {
-            Type = type;
+            Longeur = longeur;
+
             cases = carres;
 
             foreach (Case carre in cases)
@@ -20,7 +21,7 @@ namespace BatailleNavale
             }
         }
 
-        private bool EstCoule()
+        public bool EstCoule()
         {
             foreach (Case carre in cases)
             {

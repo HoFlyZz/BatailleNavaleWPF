@@ -5,10 +5,12 @@ namespace BatailleNavale
     public abstract class Navire : INaivre
     {
         public int Longeur { get; }
+
         public bool Coule { get => EstCoule(); }
 
         public Case[] cases;
 
+        //Constructeur de Navire Reçois la longeur et la postion d'un Navire
         public Navire (int longeur , Case[] carres)
         {
             Longeur = longeur;

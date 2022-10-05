@@ -29,7 +29,7 @@ namespace BatailleNavale
             // Nouvelle matrice vide (aucune case occupée au départ)
             Matrice = new Matrice2D(NbLignes, NbColonnes) { IndexDepart = 1 };
 
-            // On place les navires pour un début de partie
+            // On place les navires pour un début de partie En instanciant chaqu'un des navires
             new SousMarin(TrouverPlace(SousMarin.TailleSousMarin));
             new SousMarin(TrouverPlace(SousMarin.TailleSousMarin));
             new Destroyer(TrouverPlace(Destroyer.TailleDestroyer));
